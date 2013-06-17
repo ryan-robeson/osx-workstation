@@ -82,8 +82,8 @@ node default {
       'ssh-copy-id',
       'sshfs',
       'tmux',
-      'wol',
-      'gnu-tar'
+      'gnu-tar',
+      'zsh'
     ]:
   }
 
@@ -92,46 +92,6 @@ node default {
     target => $boxen::config::repodir
   }
 
-  $home = "/Users/${::boxen_user}"
-  $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
+  include ryan::master
 
-  repository { $dotfiles_dir:
-    source => "${::github_user}/dotfiles"
-  }
-
-  file { "${home}/.zshrc":
-    ensure => link,
-    target => "${dotfiles_dir}/.zshrc",
-    require => Repository[$dotfiles_dir]
-  }
-
-  file { "${home}/.vimrc":
-    ensure => link,
-    target => "${dotfiles_dir}/.vimrc",
-    require => Repository[$dotfiles_dir]
-  }
-
-  file { "${home}/.vim":
-    ensure => link,
-    target => "${dotfiles_dir}/.vim",
-    require => Repository[$dotfiles_dir]
-  }
- 
-  file { "${home}/.tmux.conf":
-    ensure => link,
-    target => "${dotfiles_dir}/.tmux.conf",
-    require => Repository[$dotfiles_dir]
-  }
-
-  file { "${home}/.gitconfig":
-    ensure => link,
-    target => "${dotfiles_dir}/.gitconfig",
-    require => Repository[$dotfiles_dir]
-  }
-
-  file { "${home}/.ssh":
-    ensure => link,
-    target => "${dotfiles_dir}/.ssh",
-    require => Repository[$dotfiles_dir]
-  }
 }

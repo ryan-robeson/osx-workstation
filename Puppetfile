@@ -19,6 +19,7 @@ github "boxen", "2.1.0"
 # some/most of these if you want, but it's not recommended.
 
 github "gcc",        "1.0.0"
+github "osx",        "1.3.0"
 github "git",        "1.2.2"
 github "homebrew",   "1.1.2"
 github "hub",        "1.0.0"
