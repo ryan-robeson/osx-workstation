@@ -53,10 +53,31 @@ class ryan::master {
     require => Repository[$dotfiles_dir]
   }
 
+  file { "${home}/.slate":
+    ensure => link,
+    target => "${dotfiles_dir}/.slate",
+    require => Repository[$dotfiles_dir]
+  }
+
   file { "${home}/.ssh/config":
     ensure => link,
     target => "${dotfiles_dir}/.ssh/config",
     require => Repository[$dotfiles_dir]
   }
-  
+
+  package { 'Tunnelblick':
+    provider => 'appdmg',
+    source   => "http://superb-dca3.dl.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_3.3beta54.dmg",
+  }
+
+  include dropbox
+  include virtualbox
+  include vagrant
+  include heroku
+  include pow
+  include vlc
+  include slate
+  include skype
+  include transmission
+  include handbrake
 }
