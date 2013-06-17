@@ -70,6 +70,21 @@ class ryan::master {
     source   => "http://superb-dca3.dl.sourceforge.net/project/tunnelblick/All%20files/Tunnelblick_3.3beta54.dmg",
   }
 
+  package { 'GIMP':
+    provider => 'appdmg',
+    source   => "ftp://ftp.gimp.org/pub/gimp/v2.8/osx/gimp-2.8.4-nopython-dmg-1.dmg"
+  }
+
+  package { 'XBMC':
+    provider => 'appdmg',
+    source   => "http://mirrors.xbmc.org/releases/osx/xbmc-12.2-x86_64.dmg"
+  }
+
+  package { 'Inkscape':
+    provider => 'appdmg',
+    source   => "http://iweb.dl.sourceforge.net/project/inkscape/inkscape/0.48.2/Inkscape-0.48.2-1-SNOWLEOPARD.dmg"
+  }
+
   include dropbox
   include virtualbox
   include vagrant
@@ -80,4 +95,5 @@ class ryan::master {
   include skype
   include transmission
   include handbrake
+  include xquartz
 }
