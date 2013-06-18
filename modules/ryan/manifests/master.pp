@@ -100,6 +100,7 @@ class ryan::master {
   include transmission
   include handbrake
   include xquartz
+	include osx::global::enable_keyboard_control_access
 
   $code_repos = [ 'www.smokymountainaeroplanes.com', 'Video-Fixer' ]
 
