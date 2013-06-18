@@ -83,6 +83,7 @@ node default {
       'sshfs',
       'tmux',
       'gnu-tar',
+      'gpg2',
       'zsh'
     ]:
   }
