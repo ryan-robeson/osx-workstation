@@ -17,6 +17,10 @@ class ryan::master {
     source => "${::github_login}/dotfiles"
   }
 
+  file { ["${home}/Code", "${home}/Code/go"]:
+    ensure => "directory"
+  }
+
   file { "${home}/.zshrc":
     ensure => link,
     target => "${dotfiles_dir}/.zshrc",
@@ -96,4 +100,41 @@ class ryan::master {
   include transmission
   include handbrake
   include xquartz
+
+  $code_repos = [ 'www.smokymountainaeroplanes.com', 'Video-Fixer' ]
+
+  define code_repositories {	
+		$home = "/Users/${::boxen_user}"
+    repository { "${home}/Code/${title}":
+			source => "${::github_login}/${title}",
+			require => File["${home}/Code"]
+		}
+  }
+
+  code_repositories { $code_repos: }
+
+	define goget {
+		exec { "Get ${title}":
+			environment => "GOPATH=/Users/${::boxen_user}/Code/go",
+			command => "go get github.com/${title}",
+			unless => "test -d /Users/${::boxen_user}/Code/go/src/github.com/${title}"
+		}
+	}
+
+	goget { ["ryan-robeson/monitor_and_run"]: }
+
+	$dropbox_repos = [ "cycle_timer", "hbc", "hbc_events", "mds/truck_tracker", "www.docksidelogistics.com" ]
+
+	define repo_from_dropbox {
+		$home = "/Users/${::boxen_user}"
+		$dropbox_code = "${home}/Dropbox/code"
+
+		repository { "${home}/Code/${title}":
+			source => "${dropbox_code}/${title}.git",
+			require => File["${home}/Code"]
+		}
+	}
+
+	repo_from_dropbox { $dropbox_repos: }
+
 }
