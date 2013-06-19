@@ -138,4 +138,9 @@ class ryan::master {
 
 	repo_from_dropbox { $dropbox_repos: }
 
+	# Install npm modules
+	nodejs::module { 'express':
+		node_version => 'v0.10.5'
+	}
+
 }
