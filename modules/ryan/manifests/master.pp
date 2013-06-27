@@ -89,6 +89,11 @@ class ryan::master {
     source   => "http://iweb.dl.sourceforge.net/project/inkscape/inkscape/0.48.2/Inkscape-0.48.2-1-SNOWLEOPARD.dmg"
   }
 
+	package { 'CoRD':
+		provider => 'compressed_app',
+		source => 'http://superb-dca2.dl.sourceforge.net/project/cord/cord/0.5.7/CoRD_0.5.7.zip'
+	}
+
   include dropbox
   include virtualbox
   include vagrant
