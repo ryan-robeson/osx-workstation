@@ -82,6 +82,7 @@ node default {
       'ssh-copy-id',
       'sshfs',
       'tmux',
+      'tree',
       'gnu-tar',
       'gpg2',
       'zsh'
