@@ -105,7 +105,16 @@ class ryan::master {
   include transmission
   include handbrake
   include xquartz
+	include sublime_text_2
 	include osx::global::enable_keyboard_control_access
+
+	sublime_text_2::package { 'Emmet':
+		  source => 'sergeche/emmet-sublime'
+	}
+
+	sublime_text_2::package { 'SublimeREPL':
+		source => 'wuub/SublimeREPL'
+	}
 
   $code_repos = [ 'www.smokymountainaeroplanes.com', 'Video-Fixer' ]
 

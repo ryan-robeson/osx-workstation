@@ -74,6 +74,11 @@ GITHUBTARBALL
     slate (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sublime_text_2
+  specs:
+    sublime_text_2 (1.1.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
@@ -131,6 +136,7 @@ DEPENDENCIES
   skype (= 1.0.2)
   slate (= 1.0.0)
   stdlib (= 4.0.2)
+  sublime_text_2 (= 1.1.1)
   sudo (= 1.0.0)
   transmission (= 1.0.0)
   vagrant (= 2.0.7)
