@@ -67,6 +67,7 @@ node default {
   package {
     [
       'ack',
+      'clojure',
       'findutils',
       'dos2unix',
       'exiftool',
@@ -76,6 +77,7 @@ node default {
       'graphviz',
       'htop-osx',
       'libdvdcss',
+      'leiningen',
       'nmap',
       'p7zip',
       'pwgen',
