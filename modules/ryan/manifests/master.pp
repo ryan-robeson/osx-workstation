@@ -124,6 +124,10 @@ class ryan::master {
     source => 'wbond/sublime_terminal'
   }
 
+  sublime_text_2::package { 'Sublime_LiveReload':
+    source => 'dz0ny/LiveReload-sublimetext2'
+  }
+
   $git_ignore_lines = [ '*.7z', '*.dmg', '*.gz', '*.iso', '*.jar', '*.rar', '*.tar', '*.zip', '*.sublime-workspace']
 
   define git_ignore_lines {
