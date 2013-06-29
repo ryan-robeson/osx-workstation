@@ -116,6 +116,26 @@ class ryan::master {
 		source => 'wuub/SublimeREPL'
 	}
 
+  sublime_text_2::package { 'GitGutter':
+    source => 'jisaacks/GitGutter'
+  }
+
+  sublime_text_2::package { 'Sublime_Terminal':
+    source => 'wbond/sublime_terminal'
+  }
+
+  $git_ignore_lines = [ '*.7z', '*.dmg', '*.gz', '*.iso', '*.jar', '*.rar', '*.tar', '*.zip', '*.sublime-workspace']
+
+  define git_ignore_lines {
+    file_line { "add ${title} to gitignore":
+      path => "${git::config::configdir}/gitignore",
+      line => "${title}",
+      require => File["${git::config::configdir}/gitignore"]
+    }
+  }
+
+  git_ignore_lines { $git_ignore_lines: }
+
   $code_repos = [ 'www.smokymountainaeroplanes.com', 'Video-Fixer' ]
 
   define code_repositories {	
