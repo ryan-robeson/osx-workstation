@@ -27,4 +27,12 @@ class ryan::master {
 		node_version => 'v0.10.5'
 	}
 
+  nodejs::module { 'yo':
+    node_version => 'v0.10.5'
+  }
+
+  nodejs::module { 'generator-angular':
+    node_version => 'v0.10.5'
+  }
+
 }
