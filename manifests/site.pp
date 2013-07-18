@@ -81,6 +81,7 @@ node default {
       'nmap',
       'p7zip',
       'pwgen',
+      's3cmd',
       'ssh-copy-id',
       'sshfs',
       'tmux',
