@@ -24,6 +24,7 @@ class ryan::packages {
 		source => 'http://superb-dca2.dl.sourceforge.net/project/cord/cord/0.5.7/CoRD_0.5.7.zip'
 	}
 
+  include cyberduck
   include dropbox
   include virtualbox 
   include vagrant 
