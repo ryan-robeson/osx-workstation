@@ -58,6 +58,10 @@ class ryan::packages {
   sublime_text_2::package { 'Sublime_LiveReload':
     source => 'dz0ny/LiveReload-sublimetext2'
   }
+
+  sublime_text_2::package { 'Markdown Preview':
+    source => 'revolunet/sublimetext-markdown-preview'
+  }
   ### Sublime Text 2 ###
 
   ### Dropbox ###
