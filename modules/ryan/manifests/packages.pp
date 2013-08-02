@@ -26,6 +26,7 @@ class ryan::packages {
 
   include cyberduck
   include dropbox
+  include firefox
   include virtualbox 
   include vagrant 
   include heroku 
