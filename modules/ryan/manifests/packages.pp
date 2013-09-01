@@ -64,6 +64,10 @@ class ryan::packages {
   sublime_text_2::package { 'Markdown Preview':
     source => 'revolunet/sublimetext-markdown-preview'
   }
+
+  sublime_text_2::package { 'LatexTools':
+    source => 'SublimeText/LaTeXTools'
+  }
   ### Sublime Text 2 ###
 
   ### Dropbox ###
