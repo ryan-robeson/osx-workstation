@@ -73,6 +73,10 @@ class ryan::packages {
   sublime_text_2::package { 'LatexTools':
     source => 'SublimeText/LaTeXTools'
   }
+
+  sublime_text_2::package { 'CheckBounce':
+    source => 'phyllisstein/CheckBounce'
+  }
   ### Sublime Text 2 ###
 
   ### Dropbox ###
