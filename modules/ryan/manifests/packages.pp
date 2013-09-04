@@ -29,6 +29,11 @@ class ryan::packages {
     source => 'http://softlayer-dal.dl.sourceforge.net/project/skim-app/Skim/Skim-1.4.4/Skim-1.4.4.dmg'
   }
 
+  package { 'Pandoc':
+    provider => 'pkgdmg',
+    source => 'https://pandoc.googlecode.com/files/pandoc-1.11.1.dmg'
+  }
+
   include cyberduck
   include dropbox
   include firefox
