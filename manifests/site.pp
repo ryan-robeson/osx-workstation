@@ -88,6 +88,8 @@ node default {
       'tree',
       'gnu-tar',
       'gpg2',
+      'unrar',
+      'youtube-dl',
       'zsh'
     ]:
   }
