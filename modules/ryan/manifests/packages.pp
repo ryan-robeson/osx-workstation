@@ -24,6 +24,11 @@ class ryan::packages {
 		source => 'http://superb-dca2.dl.sourceforge.net/project/cord/cord/0.5.7/CoRD_0.5.7.zip'
 	}
 
+  package { 'Keka':
+    provider => 'appdmg',
+    source   => 'http://www.kekaosx.com/release/Keka-1.0.3-intel.dmg'
+  }
+
   package { 'Skim':
     provider => 'appdmg',
     source => 'http://softlayer-dal.dl.sourceforge.net/project/skim-app/Skim/Skim-1.4.4/Skim-1.4.4.dmg'
