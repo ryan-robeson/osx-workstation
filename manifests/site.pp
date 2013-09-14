@@ -89,6 +89,7 @@ node default {
       'gnu-tar',
       'gpg2',
       'unrar',
+      'watch',
       'youtube-dl',
       'zsh'
     ]:
