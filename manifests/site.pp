@@ -84,6 +84,7 @@ node default {
       's3cmd',
       'ssh-copy-id',
       'sshfs',
+      'tesseract',
       'tmux',
       'tree',
       'gnu-tar',
