@@ -67,6 +67,7 @@ node default {
   package {
     [
       'ack',
+      'ansible',
       'clojure',
       'findutils',
       'dos2unix',
