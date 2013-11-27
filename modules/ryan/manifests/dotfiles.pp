@@ -21,6 +21,16 @@ class ryan::dotfiles {
 
   place_dotfiles { $dotfiles: }
 
+  file { "${home}/.zshenv":
+    ensure => 'present'
+  }
+
+  file_line { 'add heroku toolbelt to .zshenv':
+    path => "${home}/.zshenv",
+    line => 'export PATH="/usr/local/heroku/bin:$PATH"',
+    require => File["${home}/.zshenv"]
+  }
+
   file_line { 'add boxen src line to .zshrc':
     path => "${home}/.zshrc",
     line => "[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh",
