@@ -35,7 +35,7 @@ github "sudo",       "1.0.0"
 
 github "dropbox",        "1.1.0"       
 github "virtualbox",     "1.0.3"  
-github "vagrant",        "2.0.7"
+github "vagrant",        "3.0.0"
 github "heroku",         "2.0.0"
 github "pow",            "1.0.0"
 github "vlc",            "1.0.1"
