@@ -36,7 +36,7 @@ class ryan::packages {
 
   package { 'Pandoc':
     provider => 'pkgdmg',
-    source => 'https://pandoc.googlecode.com/files/pandoc-1.11.1.dmg'
+    source => 'https://pandoc.googlecode.com/files/pandoc-1.12.1-1.dmg'
   }
 
   include cyberduck
