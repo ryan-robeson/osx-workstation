@@ -77,6 +77,7 @@ node default {
       'go',
       'graphicsmagick',
       'graphviz',
+      'hg',
       'htop-osx',
       'libdvdcss',
       'libvirt',
