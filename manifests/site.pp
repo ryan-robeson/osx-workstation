@@ -86,6 +86,7 @@ node default {
       'p7zip',
       'pwgen',
       's3cmd',
+      'squashfs',
       'ssh-copy-id',
       'sshfs',
       'tesseract',
