@@ -70,6 +70,7 @@ node default {
       'ack',
       'ansible',
       'clojure',
+      'clozure-cl',
       'findutils',
       'dos2unix',
       'exiftool',
