@@ -71,6 +71,7 @@ node default {
       'ansible',
       'clojure',
       'clozure-cl',
+      'dvdauthor',
       'findutils',
       'dos2unix',
       'exiftool',
