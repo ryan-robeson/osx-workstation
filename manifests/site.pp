@@ -69,8 +69,10 @@ node default {
     [
       'ack',
       'ansible',
+      'boot2docker',
       'clojure',
       'clozure-cl',
+      'docker',
       'dvdauthor',
       'findutils',
       'dos2unix',
