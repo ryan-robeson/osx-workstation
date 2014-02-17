@@ -36,4 +36,10 @@ class ryan::dotfiles {
     line => "[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh",
     require => File["${home}/.zshrc"]
   }
+
+  file_line { 'add docker setup to .zshrc':
+    path => "${home}/.zshrc",
+    line => "export DOCKER_HOST=tcp://",
+    require => File["${home}/.zshrc"]
+  }
 }
