@@ -86,6 +86,7 @@ node default {
       'libdvdcss',
       'libvirt',
       'leiningen',
+      'ncdu',
       'nmap',
       'p7zip',
       'pwgen',
