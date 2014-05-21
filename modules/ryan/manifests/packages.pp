@@ -87,6 +87,10 @@ class ryan::packages {
   sublime_text_2::package { 'CheckBounce':
     source => 'phyllisstein/CheckBounce'
   }
+
+  sublime_text_2::package { 'Liquid Syntax Mode':
+    source => 'siteleaf/liquid-syntax-mode'
+  }
   ### Sublime Text 2 ###
 
   ### Dropbox ###
