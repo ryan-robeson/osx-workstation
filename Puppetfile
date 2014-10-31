@@ -29,39 +29,43 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.3.4"
+github "boxen", "3.7.0"
+
+# Support for default hiera data in modules
+
+github "module_data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 
-github "sudo",       "1.0.0"
-github "gcc",        "2.0.1"
-github "osx",        "1.3.0"
-github "git",        "1.2.5"
-github "homebrew",   "1.5.1"
-github "hub",        "1.0.3"
-github "inifile",    "1.0.0", :repo => "puppetlabs/puppetlabs-inifile"
-github "nodejs",     "3.3.0"
-github "openssl",    "1.0.0"
-github "repository", "2.2.0"
-github "ruby",       "6.7.2"
-github "stdlib",     "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
-github "sudo",       "1.0.0"
-github "xquartz",    "1.1.1"
+github "osx",        "2.7.1"
+github "gcc",         "2.2.0"
+github "git",         "2.5.0"
+github "homebrew",    "1.9.5"
+github "hub",         "1.3.0"
+github "inifile",     "1.1.1", :repo => "puppetlabs/puppetlabs-inifile"
+github "nodejs",      "3.8.1"
+github "openssl",     "1.0.0"
+github "pkgconfig",   "1.0.0"
+github "repository",  "2.3.0"
+github "ruby",        "8.1.4"
+github "stdlib",      "4.2.1", :repo => "puppetlabs/puppetlabs-stdlib"
+github "sudo",        "1.0.0"
+github "xquartz",     "1.2.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
-github "dropbox",        "1.1.0"       
-github "virtualbox",     "1.0.3"  
-github "vagrant",        "3.0.0"
-github "heroku",         "2.0.0"
-github "pow",            "1.0.0"
-github "vlc",            "1.0.1"
-github "slate",          "1.0.0"
-github "skype",          "1.0.2"
-github "transmission",   "1.0.0"
-github "handbrake",      "1.0.0"
+github "dropbox",        "1.4.1"       
+github "virtualbox",     "1.0.13"  
+github "vagrant",        "3.2.0"
+github "heroku",         "2.1.1"
+github "pow",            "2.3.0"
+github "vlc",            "1.1.0"
+github "slate",          "1.0.1"
+github "skype",          "1.0.9"
+github "transmission",   "1.1.0"
+github "handbrake",      "1.0.1"
 github "sublime_text_2", "1.1.2"
-github "cyberduck",      "1.0.0"
-github "firefox",        "1.1.1"
+github "cyberduck",      "1.0.1"
+github "firefox",        "1.2.3"
