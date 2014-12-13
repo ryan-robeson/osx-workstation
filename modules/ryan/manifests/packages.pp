@@ -137,6 +137,7 @@ class ryan::packages {
       'nmap',
       'p7zip',
       'pwgen',
+      'reattach-to-user-namespace',
       's3cmd',
       'squashfs',
       'ssh-copy-id',
