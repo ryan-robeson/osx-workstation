@@ -36,7 +36,7 @@ class ryan::packages {
 
   package { 'Pandoc':
     provider => 'pkgdmg',
-    source => 'https://pandoc.googlecode.com/files/pandoc-1.12.1-1.dmg'
+    source => 'https://github.com/jgm/pandoc/releases/download/1.13.1/pandoc-1.13.1-osx.pkg'
   }
 
   include cyberduck
@@ -45,7 +45,6 @@ class ryan::packages {
   include virtualbox 
   include vagrant 
   include heroku 
-  include pow 
   include vlc 
   include slate 
   include skype
@@ -123,14 +122,16 @@ class ryan::packages {
       'dos2unix',
       'exiftool',
       'ffmpeg',
+      'gnu-tar',
+      'gnupg2',
       'go',
       'graphicsmagick',
       'graphviz',
-      'hg',
       'htop-osx',
       'libdvdcss',
       'libvirt',
       'leiningen',
+      'mercurial',
       'mitmproxy',
       'ncdu',
       'nmap',
@@ -143,8 +144,6 @@ class ryan::packages {
       'tesseract',
       'tmux',
       'tree',
-      'gnu-tar',
-      'gpg2',
       'qemu',
       'unrar',
       'watch',

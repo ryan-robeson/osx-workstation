@@ -58,7 +58,7 @@ node default {
   include hub
 
   # node versions
-  include nodejs::v0_10
+  nodejs::version { 'v0.10.33': }
 
   # default ruby versions
   ruby::version { '1.9.3': }
@@ -68,17 +68,14 @@ node default {
   ruby::version { '2.1.2': }
 
   # common, useful packages
-  package {
-    [
-      'zsh'
-    ]:
-  }
+  # Handled in modules/ryan/manifests/packages.pp
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
     target => $boxen::config::repodir
   }
 
-  include ryan::master
+  $gitconfigdir = $git::configdir # Workaround since lookup fails in module for some reason
 
+  include ryan::master
 }

@@ -1,13 +1,8 @@
 class ryan::git {
-  $git_ignore_lines = [ '*.7z', '*.dmg', '*.gz', '*.iso', '*.jar', '*.rar', '*.tar', '*.zip', '*.sublime-workspace']
-
-  define git_ignore_lines {
-    file_line { "add ${title} to gitignore":
-      path => "${git::config::configdir}/gitignore",
-      line => "${title}",
-      require => File["${git::config::configdir}/gitignore"]
-    }
+  # Overwrite the default gitignore provided by puppet-git
+  File <| title == "${gitconfigdir}/gitignore" |> {
+    source => undef,
+    content => file('ryan/gitignore'),
+    require => File["${gitconfigdir}"]
   }
-
-  git_ignore_lines { $git_ignore_lines: }
 }

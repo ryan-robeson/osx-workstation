@@ -14,6 +14,7 @@
 :hierarchy:
   - "users/%{github_login}"
   - common
+:logger: console
 
 # Many modules make their own hiera data available through the use of
 # puppet-module-data. Some depend on the 'deeper' merge_behavior setting, so

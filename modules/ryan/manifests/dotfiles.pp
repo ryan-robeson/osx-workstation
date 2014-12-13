@@ -21,13 +21,9 @@ class ryan::dotfiles {
 
   place_dotfiles { $dotfiles: }
 
-  file { "${home}/.zsh-mac.sh":
-    ensure => 'present'
-  }
-
   file_line { 'add boxen src line to .zsh-mac':
-    path => "${home}/.zsh-mac.sh",
+    path => "${home}/.zsh-mac",
     line => "[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh",
-    require => File["${home}/.zsh-mac.sh"]
+    require => File["${home}/.zsh-mac"]
   }
 }
