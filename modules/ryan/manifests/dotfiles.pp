@@ -17,7 +17,7 @@ class ryan::dotfiles {
     }
   }
 
-  $dotfiles = [ "zshrc", "zshenv", "vimrc", "vim", "tmux.conf", "gitconfig", "slate", "ssh/config" ]
+  $dotfiles = [ "zshrc", "zshenv", "zsh-mac", "vimrc", "vim", "tmux.conf", "gitconfig", "slate", "ssh/config" ]
 
   place_dotfiles { $dotfiles: }
 
@@ -28,18 +28,6 @@ class ryan::dotfiles {
   file_line { 'add boxen src line to .zsh-mac':
     path => "${home}/.zsh-mac.sh",
     line => "[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh",
-    require => File["${home}/.zsh-mac.sh"]
-  }
-
-  file_line { 'add docker setup to .zsh-mac.sh':
-    path => "${home}/.zsh-mac.sh",
-    line => "export DOCKER_HOST=tcp://",
-    require => File["${home}/.zsh-mac.sh"]
-  }
-
-  file_line { 'add qlmanage alias to .zsh-mac':
-    path => "${home}/.zsh-mac.sh",
-    line => "alias ql='qlmanage -p'",
     require => File["${home}/.zsh-mac.sh"]
   }
 }
