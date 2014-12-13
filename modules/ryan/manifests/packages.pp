@@ -108,4 +108,49 @@ class ryan::packages {
 
   repo_from_dropbox { $dropbox_repos: }
   ### Dropbox ###
+
+  ### Homebrew ###
+  package {
+    [
+      'ack',
+      'ansible',
+      'boot2docker',
+      'clojure',
+      'clozure-cl',
+      'docker',
+      'dvdauthor',
+      'findutils',
+      'dos2unix',
+      'exiftool',
+      'ffmpeg',
+      'go',
+      'graphicsmagick',
+      'graphviz',
+      'hg',
+      'htop-osx',
+      'libdvdcss',
+      'libvirt',
+      'leiningen',
+      'mitmproxy',
+      'ncdu',
+      'nmap',
+      'p7zip',
+      'pwgen',
+      's3cmd',
+      'squashfs',
+      'ssh-copy-id',
+      'sshfs',
+      'tesseract',
+      'tmux',
+      'tree',
+      'gnu-tar',
+      'gpg2',
+      'qemu',
+      'unrar',
+      'watch',
+      'youtube-dl',
+      'zsh'
+    ]:
+  }
+  ### End Homebrew ###
 }
