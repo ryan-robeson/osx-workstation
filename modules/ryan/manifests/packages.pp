@@ -133,6 +133,7 @@ class ryan::packages {
       'leiningen',
       'mercurial',
       'mitmproxy',
+      'mozjpeg',
       'ncdu',
       'nmap',
       'p7zip',
