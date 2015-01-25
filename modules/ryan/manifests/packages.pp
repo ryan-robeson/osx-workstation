@@ -151,6 +151,7 @@ class ryan::packages {
       'tree',
       'qemu',
       'unrar',
+      'wakeonlan',
       'watch',
       'youtube-dl',
       'zsh'
