@@ -34,63 +34,18 @@ class ryan::packages {
     source => 'http://softlayer-dal.dl.sourceforge.net/project/skim-app/Skim/Skim-1.4.4/Skim-1.4.4.dmg'
   }
 
-  package { 'Pandoc':
-    provider => 'pkgdmg',
-    source => 'https://github.com/jgm/pandoc/releases/download/1.13.1/pandoc-1.13.1-osx.pkg'
-  }
-
-  include cyberduck
   include dropbox
   include firefox
-  include virtualbox 
-  include vagrant 
-  include heroku 
-  include vlc 
-  include slate 
-  include skype
-  include transmission
   include handbrake
-  include xquartz
-	include sublime_text_2
+  include heroku 
 	include osx::global::enable_keyboard_control_access
-
-  ### Sublime Text 2 ###
-	sublime_text_2::package { 'Emmet':
-		  source => 'sergeche/emmet-sublime'
-	}
-
-	sublime_text_2::package { 'SublimeREPL':
-		source => 'wuub/SublimeREPL'
-	}
-
-  sublime_text_2::package { 'GitGutter':
-    source => 'jisaacks/GitGutter'
-  }
-
-  sublime_text_2::package { 'Sublime_Terminal':
-    source => 'wbond/sublime_terminal'
-  }
-
-  sublime_text_2::package { 'Sublime_LiveReload':
-    source => 'dz0ny/LiveReload-sublimetext2'
-  }
-
-  sublime_text_2::package { 'Markdown Preview':
-    source => 'revolunet/sublimetext-markdown-preview'
-  }
-
-  sublime_text_2::package { 'LatexTools':
-    source => 'SublimeText/LaTeXTools'
-  }
-
-  sublime_text_2::package { 'CheckBounce':
-    source => 'phyllisstein/CheckBounce'
-  }
-
-  sublime_text_2::package { 'Liquid Syntax Mode':
-    source => 'siteleaf/liquid-syntax-mode'
-  }
-  ### Sublime Text 2 ###
+  include skype
+  include slate 
+  include transmission
+  include vagrant 
+  include virtualbox 
+  include vlc 
+  include xquartz
 
   ### Dropbox ###
   $dropbox_repos = [ "cycle_timer", "hbc", "hbc_events", "mds/truck_tracker", "www.docksidelogistics.com" ]
@@ -111,50 +66,134 @@ class ryan::packages {
   ### Homebrew ###
   package {
     [
-      'ack',
-      'ansible',
-      'boot2docker',
-      'clojure',
-      'clozure-cl',
-      'docker',
-      'dvdauthor',
-      'findutils',
-      'dos2unix',
-      'exiftool',
-      'ffmpeg',
-      'gifsicle',
-      'gnu-tar',
-      'gnupg2',
-      'go',
-      'graphicsmagick',
-      'graphviz',
-      'htop-osx',
-      'libdvdcss',
-      'libvirt',
-      'leiningen',
-      'mercurial',
-      'mitmproxy',
-      'mozjpeg',
-      'ncdu',
-      'nmap',
-      'p7zip',
-      'pngcrush',
-      'pngquant',
-      'pwgen',
-      'reattach-to-user-namespace',
-      's3cmd',
-      'squashfs',
-      'ssh-copy-id',
-      'sshfs',
-      'tesseract',
-      'tmux',
-      'tree',
-      'qemu',
-      'unrar',
-      'wakeonlan',
-      'watch',
-      'youtube-dl',
-      'zsh'
+    'ack',
+    'aircrack-ng',
+    'ansible',
+    'archivemount',
+    'aria2',
+    'autoconf',
+    'automake',
+    'axel',
+    'bwctl',
+    'bwm-ng',
+    'cabextract',
+    'cairo',
+    'cctools',
+    'class-dump',
+    'clojure',
+    'clozure-cl',
+    'cmake',
+    'coreutils',
+    'cowsay',
+    'csv-fix',
+    'ctags',
+    'curl',
+    'dcraw',
+    'ddrescue',
+    'dnsmasq',
+    'docker',
+    'dos2unix',
+    'exiftool',
+    'faac',
+    'fdk-aac',
+    'ffmpeg',
+    'figlet',
+    'findutils',
+    'flac',
+    'fontconfig',
+    'freerdp',
+    'freetype',
+    'fribidi',
+    'fuse4x',
+    'fuse4x-kext',
+    'gcc',
+    'gd',
+    'gdb',
+    'geoip',
+    'gettext',
+    'gifsicle',
+    'git',
+    'gnu-sed',
+    'gnu-tar',
+    'gnupg2',
+    'gnuplot',
+    'gnutls',
+    'go',
+    'gpg-agent',
+    'graphviz',
+    'gtk+',
+    'harfbuzz',
+    'htop-osx',
+    'hub',
+    'imagemagick',
+    'ipcalc',
+    'iperf',
+    'iperf3',
+    'libdvdcss',
+    'libiconv',
+    'libtool',
+    'lrzip',
+    'lua',
+    'luajit',
+    'lz4',
+    'lzo',
+    'lzop',
+    'mednafen',
+    'mercurial',
+    'mitmproxy',
+    'mkvtoolnix',
+    'mono',
+    'mozjpeg',
+    'mplayer',
+    'namebench',
+    'nasm',
+    'ncdu',
+    'nettle',
+    'nmap',
+    'numpy',
+    'opencv3',
+    'openexr',
+    'openssl',
+    'p7zip',
+    'pandoc',
+    'pango',
+    'pixz',
+    'pkg-config',
+    'pngcrush',
+    'pngquant',
+    'poppler',
+    'proxychains-ng',
+    'pv',
+    'pwgen',
+    'python3',
+    'qemu',
+    'qt5',
+    'readline',
+    'reattach-to-user-namespace',
+    'reaver',
+    'rsync',
+    'rust',
+    's3cmd',
+    'socat',
+    'sox',
+    'sqlite',
+    'squashfs',
+    'ssh-copy-id',
+    'sshfs',
+    'tesseract',
+    'tmux',
+    'tree',
+    'tsocks',
+    'unrar',
+    'vim',
+    'wakeonlan',
+    'watch',
+    'wget',
+    'xz',
+    'yasm',
+    'youtube-dl',
+    'zpaq',
+    'zsh'
     ]:
   }
   ### End Homebrew ###
