@@ -55,10 +55,16 @@ Homebrew::Formula <| |> -> Package <| |>
 node default {
   # core modules, needed for most things
   include git
-  include hub
+
+  # Global nodejs version (auto-installed)
+  # https://github.com/boxen/puppet-nodejs
+  class { 'nodejs::global':
+    version => '4.5.0'
+  }
 
   # node versions
-  nodejs::version { 'v0.10.33': }
+  nodejs::version { '6.5.0': }
+
 
   # default ruby versions
   ruby::version { '1.9.3': }

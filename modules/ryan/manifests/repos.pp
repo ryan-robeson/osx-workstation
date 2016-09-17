@@ -1,5 +1,5 @@
 class ryan::repos {
-  $code_repos = [ 'www.smokymountainaeroplanes.com', 'Video-Fixer' ]
+  $code_repos = [ 'Video-Fixer' ]
 
   define code_repositories {  
     $home = "/Users/${::boxen_user}"
