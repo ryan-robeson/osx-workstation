@@ -20,10 +20,4 @@ class ryan::dotfiles {
   $dotfiles = [ "zshrc", "zshenv", "zsh-mac", "vimrc", "vim", "tmux.conf", "gitconfig", "slate", "ssh/config" ]
 
   place_dotfiles { $dotfiles: }
-
-  file_line { 'add boxen src line to .zsh-mac':
-    path => "${home}/.zsh-mac",
-    line => "[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh",
-    require => File["${home}/.zsh-mac"]
-  }
 }

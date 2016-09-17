@@ -23,16 +23,16 @@ class ryan::master {
   include ryan::repos
 
 	# Install npm modules
-	nodejs::module { 'express':
-		node_version => 'v0.10.33'
-	}
+	#nodejs::module { 'express':
+	#	node_version => 'v0.10.33'
+	#}
 
-  nodejs::module { 'yo':
-    node_version => 'v0.10.33'
-  }
+  #nodejs::module { 'yo':
+  #  node_version => 'v0.10.33'
+  #}
 
-  nodejs::module { 'generator-angular':
-    node_version => 'v0.10.33'
-  }
+  #nodejs::module { 'generator-angular':
+  #  node_version => 'v0.10.33'
+  #}
 
 }
