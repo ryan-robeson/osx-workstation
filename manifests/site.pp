@@ -56,16 +56,6 @@ node default {
   # core modules, needed for most things
   include git
 
-  # Global nodejs version (auto-installed)
-  # https://github.com/boxen/puppet-nodejs
-  class { 'nodejs::global':
-    version => '4.5.0'
-  }
-
-  # node versions
-  nodejs::version { '6.5.0': }
-
-
   # default ruby versions
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }

@@ -22,4 +22,4 @@
 ## See https://github.com/boxen/puppet-java for docs
 #java::update_version: 51
 
-"nodejs::build::ensure": "1f9023f3156f5058ade0d2bff07725f234405955"
+# "nodejs::build::ensure": "1f9023f3156f5058ade0d2bff07725f234405955"
